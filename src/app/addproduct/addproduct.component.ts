@@ -79,7 +79,7 @@ export class AddproductComponent implements OnInit {
       id: this.builder.control({ value: 0, disabled: true }),
       productCode: this.builder.control(this.productform.value.code),
       price: this.builder.control(this.productform.value.price),
-      isactive: this.builder.control(true),
+      active: this.builder.control(true),
       colorId: this.builder.control(''),
       sizeId: this.builder.control(''),
       remarks: this.builder.control('')

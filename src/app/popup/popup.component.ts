@@ -20,7 +20,7 @@ export class PopupComponent implements OnInit {
         this.editdata = response;
         this.companyform.setValue({
           id: this.editdata.id, name: this.editdata.name, empcount: this.editdata.empcount,
-          revenue: this.editdata.revenue, address: this.editdata.address, isactive: this.editdata.isactive
+          revenue: this.editdata.revenue, address: this.editdata.address, active: this.editdata.active
         });
       });
     }
@@ -32,7 +32,7 @@ export class PopupComponent implements OnInit {
     empcount: this.builder.control('', Validators.required),
     revenue: this.builder.control('', Validators.required),
     address: this.builder.control('', Validators.required),
-    isactive: this.builder.control(true),
+    active: this.builder.control(true),
   });
 
   SaveCompany() {

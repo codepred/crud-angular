@@ -9,14 +9,14 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  apiurl = 'https://localhost:8082/'
+  apiurl = 'http://localhost:3000/company'
   private _refreshrequired = new Subject<void>();
   get Refreshrequired() {
     return this._refreshrequired;
   }
 
   GetAllProducts() {
-    return this.http.get(this.apiurl + 'product/GetAll');
+    return this.http.get(this.apiurl);
   }
 
   GetProductbycode(code: any) {
